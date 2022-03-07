@@ -239,5 +239,5 @@ TBA
 
 <p align="center">
   <a href="https://github.com/madebypixel02/Machine-Learning-Pacman">&#11013;</a>
-  <a href="https://github.com/madebypixel02/Uc3m-Projects-2022">&#127968;</a>
+  <a href="https://github.com/madebypixel02/Uc3m-Projects">&#127968;</a>
 </p>
