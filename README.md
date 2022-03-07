@@ -13,11 +13,24 @@
 <!-- By: aperez-b <100429952@alumnos.uc3m.es>                                -->
 <!--                                                                         -->
 <!-- Created: 2022/03/07 09:50:11 by aperez-b                                -->
-<!-- Updated: 2022/03/07 10:36:25 by aperez-b                                -->
+<!-- Updated: 2022/03/07 14:11:17 by aperez-b                                -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
-# OpenSSL 2022 - Data Protection & Cybersecurity
+# OpenSSL Practices 2022 - Data Protection & Cybersecurity
+
+*Welcome to the Open Secure Sockets layer 🔑*
+
+<p align="center">
+  <a href="https://www.uc3m.es/Home">
+    <img src="https://user-images.githubusercontent.com/40824677/157040289-6bddd590-ba4a-4578-a1b9-6a35be9ff7b0.png">
+  </a>
+</p>
+
+### Table of Contents
+
+- [Introduction](#introduction)
+- []
 
 ## Introduction
 
