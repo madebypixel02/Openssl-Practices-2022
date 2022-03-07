@@ -19,18 +19,21 @@
 
 # OpenSSL Practices 2022 - Data Protection & Cybersecurity
 
-*Welcome to the Open Secure Sockets layer 🔑*
-
-<p align="center">
-  <a href="https://www.uc3m.es/Home">
-    <img src="https://user-images.githubusercontent.com/40824677/157040289-6bddd590-ba4a-4578-a1b9-6a35be9ff7b0.png">
-  </a>
-</p>
+*Welcome to the Open Secure Sockets Layer 🔑*
 
 ### Table of Contents
 
 - [Introduction](#introduction)
-- []
+- [Configuration of AC1](#configuration-of-ac1-root-ac)
+- [Configuration of AC2](#configuration-of-ac2-subordinate-ac)
+- [Generation of AC2’s certificate by AC1](#generation-of-ac2s-certificate-by-ac1)
+- [Generation of keys for entity A](#generation-of-keys-for-entity-a-as-well-as-its-corresponding-certificate-request)
+- [Generation of A certificate by AC2](#generation-of-a-certificate-by-ac2)
+- [Verification of A certificate](#verification-of-a-certificate)
+- [Joining the certificate and the private key](#joining-the-certificate-and-the-private-key-to-sign-in-common-applications-word-email)
+- [Use of A’s private key to sign a document](#use-of-as-private-key-to-sign-a-document)
+- [Questions](#questions)
+- [Summary](#summary)
 
 ## Introduction
 
@@ -228,3 +231,7 @@ A passphrase is request to export A private key, and a new passphrase is request
 - Could AC2 create a certificate applying step 2 of this script?
 - If you or your lab group become a Certification Authority, explain and justify (i.e., advantages, disadvantages, alternatives…) the values you would use to configure the following parameters: ``default_days``, ``default_crl_days``, ``countryName``
 - When you open the Word document, once signed, you may notice that a it gives a **Verification error**. Why does it happen? How can it be solved?
+
+## Summary
+
+TBA
