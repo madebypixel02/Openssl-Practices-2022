@@ -63,6 +63,7 @@ Verify command verifies certificate chains.
 1. Generate the directory structure necessary for AC1 and initialize the files ``serial`` and ``index.txt``.
 
 ```shell
+mkdir -p A
 cd AC1
 mkdir requests crls newcerts private
 echo '01' > serial
