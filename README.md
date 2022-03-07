@@ -13,7 +13,7 @@
 <!-- By: aperez-b <100429952@alumnos.uc3m.es>                                -->
 <!--                                                                         -->
 <!-- Created: 2022/03/07 09:50:11 by aperez-b                                -->
-<!-- Updated: 2022/03/07 10:22:40 by aperez-b                                -->
+<!-- Updated: 2022/03/07 10:36:25 by aperez-b                                -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -29,7 +29,7 @@ Specifically, the objectives are the following:
 - Understand required steps in order to an Authority issuing a certificate
 - Understand what the certificate role is regarding the signing and verifying of documents
 
-To achieve these objectives each student (or student group) becomes a ROOT CERTIFICATION AUTHORITY (equal to the role of “Fábrica Nacional de Moneda y Timbre” in the real world). Such Authority (AC1), according to organizational reasons (for example, to have a local office in all different districts), has some SUBORDINATE CERTIFICATION AUTHORITIES (AC2, AC3,…ACn). Moreover, these last Authorities are in charge of issuing public key certificates to people (A, B, C…).
+To achieve these objectives each student (or student group) becomes a ROOT CERTIFICATION AUTHORITY (equal to the role of **Fábrica Nacional de Moneda y Timbre** in the real world). Such Authority (AC1), according to organizational reasons (for example, to have a local office in all different districts), has some SUBORDINATE CERTIFICATION AUTHORITIES (AC2, AC3,…ACn). Moreover, these last Authorities are in charge of issuing public key certificates to people (A, B, C…).
 
 The group of all the Authorities composes a Public Key Infrastructure (PKI).
 
@@ -128,7 +128,7 @@ cd ..
 
 ## Generation of keys for entity A as well as its corresponding certificate request
 
-7. For entity A, generate an RSA key-pair as well as a certificate request and **send** it to AC2 (when generating the certificate requests, fill in ALL the requested fields and indicate ``ES`` as country, ``MADRID`` as province, “UC3M” as organization, and any common name (eg, one NIA) and the email is your student email.
+7. For entity A, generate an RSA key-pair as well as a certificate request and **send** it to AC2 (when generating the certificate requests, fill in ALL the requested fields and indicate ``ES`` as country, ``MADRID`` as province, **UC3M** as organization, and any common name (eg, one NIA) and the email is your student email.
 
 ```shell
 cd A
@@ -147,7 +147,7 @@ cd ..
 
 ## Generation of A certificate by AC2
 
-8. Verify the request “sent” by A.
+8. Verify the request **sent** by A.
 
 ```shell
 cd AC2
@@ -155,7 +155,7 @@ openssl req -in ./requests/Areq.pem -text -noout
 cd ..
 ```
 
-9. Generate certificate for A and “send” it back to this entity.
+9. Generate certificate for A and **send** it back to this entity.
 
 ```shell
 cd AC2
@@ -178,3 +178,40 @@ cd A
 openssl x509 -in Acert.pem -text -noout
 cd ..
 ```
+
+## Verification of A certificate
+
+11. Obtain a copy of the public key certificates of AC1 and AC2 and verify (you need to concatenate both AC1 and AC2 certificates in a single file).
+
+```shell
+cd A
+cp ../AC1/ac1cert.pem ./
+cp ../AC2/ac2cert.pem ./
+cat ac1cert.pem ac2cert.pem > certs.pem
+openssl verify -CAfile certs.pem Acert.pem
+cd ..
+```
+
+## Joining the certificate and the private key to sign in common applications (Word/ Email)
+
+12. Export the certificate of entity A, its private key and both AC1 and AC2 certificates (file certs.pem) to PKCS12 format.
+
+```shell
+cd A
+openssl pkcs12 -export -in Acert.pem -inkey Akey.pem -certfile certs.pem -out Acert.p12
+cd ..
+```
+
+A passphrase is request to export A private key, and a new passphrase is request for ``Acert.p12``
+
+## Use of A’s private key to sign a document
+
+13. Create a Microsoft Word Office document and sign it electronically signed using A private key. In order to do that, you have to import ``Acert.p12`` in the browser (``Tools > Internet options > Content > Certificates > Import...``) and, then, using Microsoft Word make use of ``Office button > Prepare > Add digital signature...``.
+
+## Questions
+
+- What is the file **serial** used for?
+- What is the file **index** used for?
+- Could AC2 create a certificate applying step 2 of this script?
+- If you or your lab group become a Certification Authority, explain and justify (i.e., advantages, disadvantages, alternatives…) the values you would use to configure the following parameters: ``default_days``, ``default_crl_days``, ``countryName``
+- When you open the Word document, once signed, you may notice that a it gives a **Verification error**. Why does it happen? How can it be solved?
