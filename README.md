@@ -236,3 +236,8 @@ A passphrase is request to export A private key, and a new passphrase is request
 ## Summary
 
 TBA
+
+<p align="center">
+  <a href="https://github.com/madebypixel02/Machine-Learning-Pacman">&#11013;</a>
+  <a href="https://github.com/madebypixel02/Uc3m-Projectss">&#127968;</a>
+</p>
