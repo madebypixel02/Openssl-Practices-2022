@@ -17,7 +17,7 @@
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
-# OpenSSL Practices 2022 - Data Protection & Cybersecurity
+# OpenSSL Practices 2022 | uc3m
 
 *Welcome to the Open Secure Sockets Layer 🔑*
 
