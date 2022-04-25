@@ -235,7 +235,7 @@ A passphrase is request to export A private key, and a new passphrase is request
 
 ## Summary
 
-TBA
+That was fun!
 
 <p align="center">
   <a href="https://github.com/madebypixel02/Machine-Learning-Pacman">&#11013;</a>
