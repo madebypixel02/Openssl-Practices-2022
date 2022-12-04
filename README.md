@@ -13,7 +13,7 @@
 <!-- By: aperez-b <100429952@alumnos.uc3m.es>                                -->
 <!--                                                                         -->
 <!-- Created: 2022/03/07 09:50:11 by aperez-b                                -->
-<!-- Updated: 2022/03/07 14:11:17 by aperez-b                                -->
+<!-- Updated: 2022/12/04 16:03:46 by aperez-b                                -->
 <!--                                                                         -->
 <!-- *********************************************************************** -->
 
@@ -238,9 +238,3 @@ A passphrase is request to export A private key, and a new passphrase is request
 That was fun!
 
 March 7th, 2022
-
-<p align="center">
-  <a href="https://github.com/madebypixel02/Machine-Learning-Pacman">&#11013;</a>
-  <a href="https://github.com/madebypixel02/Uc3m-Projects">&#127968;</a>
-  <a href="https://github.com/madebypixel02/ABE-Scalability">&#10145;</a>
-</p>
